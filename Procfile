@@ -1,1 +1,1 @@
-gunicorn app:server
+gunicorn u_1f:server
