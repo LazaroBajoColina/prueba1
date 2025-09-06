@@ -4,6 +4,12 @@ import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 import numpy as np
 
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LUMEN], suppress_callback_exceptions=True)
+
+# <<< ¡LA CORRECCIÓN MÁS IMPORTANTE ESTÁ AQUÍ! >>>
+# Expone el servidor Flask para que Gunicorn pueda encontrarlo.
+server = app.server
+
 # --- DATA: COMPLETE PERIODIC TABLE (1-118) ---
 # This is the full dataset for the periodic table.
 periodic_table_data = {
@@ -93,5 +99,6 @@ def calculate_moles(masa, mm):
 if __name__ == '__main__':
     server = app.server
     app.run(debug=False)
+
 
 
