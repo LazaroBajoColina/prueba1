@@ -100,6 +100,6 @@ def calculate_moles(masa, mm):
 # --- 4. Bloque de ejecución ---
 # Este bloque solo se ejecuta cuando corres el script directamente (ej: python unidad1.py).
 # Gunicorn NO ejecuta este bloque.
-
+    app.run(debug=False)
 
 
