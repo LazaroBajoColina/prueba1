@@ -1,1 +1,1 @@
-web: gunicorn --workers 3 --bind 0.0.0.0:$PORT main:server
+web: gunicorn --workers 3 --bind 0.0.0.0:$PORT u.1f:server
