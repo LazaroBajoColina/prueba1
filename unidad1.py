@@ -91,6 +91,7 @@ def calculate_moles(masa, mm):
     return f"Resultado: {masa / mm:.4f} moles (n)"
 
 if __name__ == '__main__':
-
+    server = app.server
     app.run(debug=False)
+
 
